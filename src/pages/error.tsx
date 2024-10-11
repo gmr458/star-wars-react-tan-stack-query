@@ -6,7 +6,7 @@ export function PageError() {
     const error = useRouteError();
 
     return (
-        <div className="flex min-h-screen flex-col items-center justify-center gap-3">
+        <div className="flex min-h-dvh flex-col items-center justify-center gap-3">
             <h1 className="text-5xl">Oops!</h1>
             
             {isRouteErrorResponse(error) ? (

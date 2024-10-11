@@ -4,7 +4,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
 
 import { Root } from "@/root";
 
@@ -21,7 +21,7 @@ const router = createBrowserRouter([
         children: [
             {
                 path: "/",
-                element: <h1>Hello</h1>,
+                element: <Navigate to="/people" />,
             },
             {
                 path: "people",

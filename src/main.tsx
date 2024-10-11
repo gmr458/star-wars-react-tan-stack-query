@@ -8,6 +8,7 @@ import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom"
 
 import { Root } from "@/root";
 
+import { PageError } from "@/pages/error";
 import { PageFilms } from "@/pages/films";
 import { PagePeople } from "@/pages/people";
 import { PagePlanets } from "@/pages/planets";
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
     {
         path: "/",
         element: <Root />,
+        errorElement: <PageError />,
         children: [
             {
                 path: "/",

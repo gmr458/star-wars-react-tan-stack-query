@@ -5,3 +5,7 @@
 html {
     overflow-y: scroll;
 }
+
+body {
+    @apply bg-slate-100;
+}

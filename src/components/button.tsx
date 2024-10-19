@@ -8,7 +8,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(({ disabl
     return (
         <button
             className={cn(
-                "rounded-md border px-2 py-1 shadow-md outline-none",
+                "rounded-md border bg-white shadow-md outline-none",
                 {
                     "cursor-not-allowed text-slate-400": disabled,
                     "hover:bg-slate-100": !disabled,

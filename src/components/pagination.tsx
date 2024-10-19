@@ -1,5 +1,7 @@
 import * as React from "react";
 
+import { ChevronRightIcon, ChevronLeftIcon } from "lucide-react";
+
 import { Button } from "@/components/button";
 
 interface PaginationProps {
@@ -39,8 +41,10 @@ export function Pagination({ currentPage, setCurrentPage, nextButtonDisabled, st
             <Button
                 disabled={currentPage === 1 || status === "pending" || status === "error"}
                 onClick={() => setCurrentPage((prevState) => Math.max(prevState - 1, 1))}
+                className="p-1"
+                aria-label="Next"
             >
-                Prev
+                <ChevronLeftIcon />
             </Button>
             <div className="mx-2 flex h-5 w-4 items-center justify-center text-center">
                 {status === "error" ? "N/A" : currentPage}
@@ -48,8 +52,10 @@ export function Pagination({ currentPage, setCurrentPage, nextButtonDisabled, st
             <Button
                 disabled={nextButtonDisabled || status === "pending" || status === "error"}
                 onClick={() => setCurrentPage(currentPage + 1)}
+                className="p-1"
+                aria-label="Previous"
             >
-                Next
+                <ChevronRightIcon />
             </Button>
         </div>
     );
